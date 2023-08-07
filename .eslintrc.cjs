@@ -31,6 +31,7 @@ module.exports = {
     "rules": {
         "quotes": ["error", "single"],
         "comma-dangle": ["error", "always-multiline"],
-        "object-curly-newline": ["error", { "ImportDeclaration": "never" }]
+        "object-curly-newline": ["error", { "ImportDeclaration": "never" }],
+        "@typescript-eslint/semi": ["error", "always"]
     }
 }
