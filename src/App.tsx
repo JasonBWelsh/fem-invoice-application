@@ -1,6 +1,6 @@
 import './App.css'
 
-function App() {
+const App = () => {
   console.log('DRD test');
 
   return (
