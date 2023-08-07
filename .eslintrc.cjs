@@ -31,6 +31,6 @@ module.exports = {
     "rules": {
         "quotes": ["error", "single"],
         "comma-dangle": ["error", "always-multiline"],
-        "object-curly-newline": ["error", { "ImportDeclaration": "multiline" }]
+        "object-curly-newline": ["error", { "ImportDeclaration": "never" }]
     }
 }
