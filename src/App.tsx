@@ -5,7 +5,7 @@ const App = (): JSX.Element => {
   console.log('DRD test');
 
   return (
-    <div className="App">
+    <div className='App'>
       <div>Hi there!</div>
     </div>
   );

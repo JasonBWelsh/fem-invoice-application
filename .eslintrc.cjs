@@ -1,37 +1,48 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es2021": true
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  extends: [
+    'standard-with-typescript',
+    'plugin:react/recommended',
+    'plugin:prettier/recommended', // Use Prettier for formatting
+    'prettier',
+  ],
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: './tsconfig.json',
+  },
+  plugins: ['react', 'prettier'],
+  rules: {
+    quotes: ['error', 'single'],
+    'comma-dangle': 'off', // Let Prettier handle this
+    'object-curly-newline': ['error', { ImportDeclaration: 'never' }],
+    '@typescript-eslint/semi': ['error', 'always'],
+    'prettier/prettier': ['error'],
+  },
+  overrides: [
+    {
+      env: {
+        node: true,
+      },
+      files: ['.eslintrc.{js,cjs}'],
+      parserOptions: {
+        sourceType: 'script',
+      },
     },
-    "extends": [
-        "standard-with-typescript",
-        "plugin:react/recommended"
-    ],
-    "overrides": [
-        {
-            "env": {
-                "node": true
-            },
-            "files": [
-                ".eslintrc.{js,cjs}"
-            ],
-            "parserOptions": {
-                "sourceType": "script"
-            }
-        }
-    ],
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module",
-        "project": "./tsconfig.json",
+    {
+      files: ['*.tsx'],
+      rules: {
+        '@typescript-eslint/comma-dangle': 'off', // Let Prettier handle this
+      },
     },
-    "plugins": [
-        "react"
-    ],
-    "rules": {
-        "quotes": ["error", "single"],
-        "comma-dangle": ["error", "always"],
-        "object-curly-newline": ["error", { "ImportDeclaration": "never" }],
-        "@typescript-eslint/semi": ["error", "always"]
-    }
-}
+    {
+      files: ['*.ts'],
+      rules: {
+        '@typescript-eslint/comma-dangle': 'off', // Let Prettier handle this
+      },
+    },
+  ],
+};
