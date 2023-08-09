@@ -21,6 +21,7 @@ module.exports = {
     'object-curly-newline': ['error', { ImportDeclaration: 'never' }],
     '@typescript-eslint/semi': ['error', 'always'],
     'prettier/prettier': ['error'],
+    'no-trailing-spaces': 'error',
   },
   overrides: [
     {
