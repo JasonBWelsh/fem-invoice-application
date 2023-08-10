@@ -22,7 +22,7 @@
   },
   "include": [
     "src",
-    "design-system/**/*"
+    "src/design-system/**/*"
   ],
   "references": [
     {

@@ -1,13 +1,20 @@
 import React from 'react';
+
+import { ThemeProvider as StyledThemeProvider } from 'styled-components';
+import { ThemeProvider, useTheme } from './state/context/theme-context';
+import { lightTheme, darkTheme } from './design-system/design-system';
+
 import './App.css';
 
 const App = (): JSX.Element => {
-  console.log('DRD test');
+  const { theme } = useTheme();
 
   return (
-    <div className='App'>
-      <div>Hi there!</div>
-    </div>
+    <StyledThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+      <div className='App'>
+        <div>Hi there!</div>
+      </div>
+    </StyledThemeProvider>
   );
 };
 
