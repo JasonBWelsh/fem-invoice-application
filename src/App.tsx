@@ -4,7 +4,7 @@ import React from 'react';
 import styled, {
   ThemeProvider as StyledThemeProvider,
 } from 'styled-components';
-import { ThemeProvider, useTheme } from './state/context/theme-context';
+import { useTheme } from './state/context/theme-context';
 import { lightTheme, darkTheme } from './design-system/design-system';
 
 import './App.css';
@@ -19,12 +19,14 @@ const TestBox = styled.div`
 //
 
 const App = (): JSX.Element => {
-  const { theme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <StyledThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <div className='App'>
         <div>Hi there!</div>
+
+        <button onClick={toggleTheme}>Toggle Me</button>
 
         <TestBox>Here is some placeholder text to test the theme provider. Wow!!!</TestBox>
       </div>
