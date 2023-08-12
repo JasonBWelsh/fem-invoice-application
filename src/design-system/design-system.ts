@@ -19,15 +19,15 @@ export const TYPOGRAPHY = {};
 
 // TODO: flesh out actual color vars that are required
 export const lightTheme = {
-  '--primary-color': COLORS.mediumPurple,
-  '--secondary-color': COLORS.lightPurple,
-  '--background-color': COLORS.lightBg,
-  '--text-color': COLORS.darkCharcoal,
+  primaryColor: COLORS.mediumPurple,
+  secondaryColor: COLORS.lightPurple,
+  backgroundColor: COLORS.lightBg,
+  textColor: COLORS.darkCharcoal,
 };
 
 export const darkTheme = {
-  '--primary-color': COLORS.mediumBluePurple,
-  '--secondary-color': COLORS.mediumGrey,
-  '--background-color': COLORS.darkThree,
-  '--text-color': COLORS.lightPurpleGrey,
+  primaryColor: COLORS.mediumBluePurple,
+  secondaryColor: COLORS.mediumGrey,
+  backgroundColor: COLORS.darkThree,
+  textColor: COLORS.lightPurpleGrey,
 };

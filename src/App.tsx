@@ -11,10 +11,10 @@ import './App.css';
 
 // TEST component for test - remove
 const TestBox = styled.div`
-  border: 3px solid var(--primary-color);
+  border: 3px solid ${({ theme }) => theme.primaryColor};
   padding: 1rem 1.5rem;
-  background: var(--background-color);
-  color: var(--text-color);
+  background: ${({ theme }) => theme.backgroundColor};
+  color: ${({ theme }) => theme.textColor};
 `;
 //
 
