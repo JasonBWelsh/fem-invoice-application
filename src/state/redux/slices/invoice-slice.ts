@@ -1,6 +1,8 @@
-import {createSlice,
+import {
+  createSlice,
   type PayloadAction,
-  createAsyncThunk,} from '@reduxjs/toolkit';
+  createAsyncThunk,
+} from '@reduxjs/toolkit';
 
 import { type Invoice } from '../../../models/invoice';
 
@@ -38,3 +40,8 @@ export const invoiceSlice = createSlice({
     },
   },
 });
+
+export const { addInvoice, editInvoice, deleteInvoiceById } =
+  invoiceSlice.actions;
+
+export default invoiceSlice.reducer;
