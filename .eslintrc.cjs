@@ -3,12 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: [
-    'standard-with-typescript',
-    'plugin:react/recommended',
-    'plugin:prettier/recommended', // Use Prettier for formatting
-    'prettier',
-  ],
+  extends: ['standard-with-typescript', 'plugin:react/recommended', 'plugin:prettier/recommended', 'prettier', 'plugin:storybook/recommended'],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
