@@ -6,6 +6,7 @@ import styled, {
 } from 'styled-components';
 import { useTheme } from './state/context/theme-context';
 import { lightTheme, darkTheme } from './design-system/design-system';
+import { Button } from './components/button'
 
 import './App.css';
 
@@ -26,7 +27,7 @@ const App = (): JSX.Element => {
       <div className='App'>
         <div>Hi there!</div>
 
-        <button onClick={toggleTheme}>Toggle Me</button>
+        <Button onClick={toggleTheme}>Toggle Me</Button>
 
         <TestBox>Here is some placeholder text to test the theme provider. Wow!!!</TestBox>
       </div>
