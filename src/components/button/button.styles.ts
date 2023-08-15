@@ -3,6 +3,8 @@ import Button from '@mui/material/Button';
 
 import { ButtonProps } from './button.component';
 
-export const StyledButton = styled(Button)<ButtonProps>`
-    outline: 3px solid tomato;
+export const StyledButton = styled(Button) <ButtonProps>`
+  // && {
+  //   outline: 3px solid tomato;
+  // }
 `;

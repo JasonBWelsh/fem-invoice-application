@@ -1,3 +1,5 @@
+import { createTheme } from '@mui/material/styles';
+
 export const COLORS = {
   mediumPurple: '#7C5DFA',
   lightPurple: '#9277FF',
@@ -17,17 +19,40 @@ export const COLORS = {
 
 export const TYPOGRAPHY = {};
 
-// TODO: flesh out actual color vars that are required
-export const lightTheme = {
+// Styled Components Theme definitions
+export const styledLightTheme = {
   primaryColor: COLORS.mediumPurple,
   secondaryColor: COLORS.lightPurple,
   backgroundColor: COLORS.lightBg,
   textColor: COLORS.darkCharcoal,
 };
 
-export const darkTheme = {
+export const styledDarkTheme = {
   primaryColor: COLORS.mediumBluePurple,
   secondaryColor: COLORS.mediumGrey,
   backgroundColor: COLORS.darkThree,
   textColor: COLORS.lightPurpleGrey,
 };
+
+// generate MUI theme from StyledThemes
+export const generateMuiTheme = (styledTheme: typeof styledLightTheme) => {
+  return createTheme({
+    palette: {
+      primary: {
+        main: styledTheme.primaryColor,
+      },
+      secondary: {
+        main: styledTheme.secondaryColor,
+      },
+      background: {
+        default: styledTheme.backgroundColor,
+      },
+      text: {
+        primary: styledTheme.textColor,
+      },
+    },
+  });
+}
+
+export const lightTheme = generateMuiTheme(styledLightTheme);
+export const darkTheme = generateMuiTheme(styledDarkTheme);
