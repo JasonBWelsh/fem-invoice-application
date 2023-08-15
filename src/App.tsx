@@ -8,9 +8,6 @@ import { useTheme } from './state/context/theme-context';
 import { lightTheme, darkTheme } from './design-system/design-system';
 import { Button } from './components/button'
 
-// test
-import Typography from '@mui/material/Typography';
-
 import './App.css';
 
 // TEST component for test - remove
@@ -30,8 +27,7 @@ const App = (): JSX.Element => {
       <div className='App'>
         <div>Hi there!</div>
 
-        {/* <Button onClick={toggleTheme}>Toggle Me</Button> */}
-        <Typography>Typography component</Typography>
+        <Button onClick={toggleTheme}>Toggle Me</Button>
 
         <TestBox>Here is some placeholder text to test the theme provider. Wow!!!</TestBox>
       </div>
