@@ -15,6 +15,8 @@ export const COLORS = {
   peach: '#9277FF',
   lightBg: '#F8F8FB',
   darkTwo: '#141625',
+
+  white: '#FFFFFF',
 };
 
 export const TYPOGRAPHY = {};
@@ -25,6 +27,7 @@ export const styledLightTheme = {
   secondaryColor: COLORS.lightPurple,
   backgroundColor: COLORS.lightBg,
   textColor: COLORS.darkCharcoal,
+  headingColor: COLORS.darkOne,
 };
 
 export const styledDarkTheme = {
@@ -32,6 +35,7 @@ export const styledDarkTheme = {
   secondaryColor: COLORS.mediumGrey,
   backgroundColor: COLORS.darkThree,
   textColor: COLORS.lightPurpleGrey,
+  headingColor: COLORS.white,
 };
 
 // generate MUI theme from StyledThemes
